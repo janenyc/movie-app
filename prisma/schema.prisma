@@ -36,3 +36,9 @@ model Person {
     movies_acted        Movie[]@relation("MovieActors")
     movies_directed Movie[]
 }
+
+model User {
+  id            Int     @id @default (autoincrement())
+  username      String @unique
+  password      String 
+}
